@@ -6,7 +6,7 @@
 
 **关联文档：**
 
-- 暂无
+- [实体与关系结构设计](./design/entity-relationship-structure.md)
 
 ---
 
