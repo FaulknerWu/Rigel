@@ -2,11 +2,13 @@
 
 ## 文档概览
 
-本产品需求文档（PRD）定义了 Rigel 的功能性与非功能性需求，作为后续架构设计、迭代排期与实现验收的唯一需求基线。
+本文档定义 Rigel 的产品愿景与需求概览。详细功能需求与迭代排期见[计划黑板](./plan/README.md)。
 
 **关联文档：**
 
+- [技术栈决策记录](./adr/0001-technology-stack-decision.md)
 - [实体与关系结构设计](./design/entity-relationship-structure.md)
+- [计划黑板与迭代排期](./plan/README.md)
 
 ---
 
@@ -16,14 +18,10 @@ Rigel 是一个面向 AI Coding Agent 的可解释代码语义检索系统，设
 
 按单仓库模式设计：一次只面向一个代码仓库进行离线索引、构建实体语义图、层次化摘要与混合检索索引，并以 MCP 服务器的形式向 AI Coding Agent 暴露能力。
 
-## 参考论文/仓库
+## 参考论文与仓库
 
-https://github.com/FalkorDB/code-graph
-
-https://github.com/SerPeter/code-atlas
-
-RepoGraph：https://arxiv.org/abs/2410.14684
-
-RepoHyper：https://arxiv.org/abs/2403.06095
-
-CodexGraph：https://arxiv.org/abs/2408.03910
+- [FalkorDB/code-graph](https://github.com/FalkorDB/code-graph)
+- [SerPeter/code-atlas](https://github.com/SerPeter/code-atlas)
+- [RepoGraph](https://arxiv.org/abs/2410.14684)
+- [RepoHyper](https://arxiv.org/abs/2403.06095)
+- [CodexGraph](https://arxiv.org/abs/2408.03910)
