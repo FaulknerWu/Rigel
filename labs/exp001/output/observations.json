@@ -1,0 +1,88 @@
+{
+  "ast": [
+    {
+      "file_path": "src/demo/Application.java",
+      "has_error": false,
+      "entity_count": 3,
+      "defines_count": 2,
+      "is_broken_sample": false
+    },
+    {
+      "file_path": "src/demo/api/Greeter.java",
+      "has_error": false,
+      "entity_count": 3,
+      "defines_count": 2,
+      "is_broken_sample": false
+    },
+    {
+      "file_path": "src/demo/base/BaseService.java",
+      "has_error": false,
+      "entity_count": 3,
+      "defines_count": 2,
+      "is_broken_sample": false
+    },
+    {
+      "file_path": "src/demo/service/GreetingService.java",
+      "has_error": false,
+      "entity_count": 3,
+      "defines_count": 2,
+      "is_broken_sample": false
+    },
+    {
+      "file_path": "src/demo/support/Helper.java",
+      "has_error": false,
+      "entity_count": 4,
+      "defines_count": 3,
+      "is_broken_sample": false
+    },
+    {
+      "file_path": "BrokenSnippet.java",
+      "has_error": true,
+      "entity_count": 4,
+      "defines_count": 3,
+      "is_broken_sample": true
+    }
+  ],
+  "probes": [
+    {
+      "probe_id": "import-greeting-service",
+      "relation_kind": "imports",
+      "source_entity_id": "file:src/demo/Application.java",
+      "expected": "demo.service.GreetingService",
+      "actual": "demo.service.GreetingService",
+      "resolved": true
+    },
+    {
+      "probe_id": "extends-base-service",
+      "relation_kind": "extends",
+      "source_entity_id": "type:demo.service.GreetingService",
+      "expected": "demo.base.BaseService",
+      "actual": "demo.base.BaseService",
+      "resolved": true
+    },
+    {
+      "probe_id": "implements-greeter",
+      "relation_kind": "implements",
+      "source_entity_id": "type:demo.service.GreetingService",
+      "expected": "demo.api.Greeter",
+      "actual": "demo.api.Greeter",
+      "resolved": true
+    },
+    {
+      "probe_id": "call-helper-decorate",
+      "relation_kind": "calls",
+      "source_entity_id": "callable:demo.service.GreetingService#compose(String)",
+      "expected": "demo.support.Helper#decorate(String)",
+      "actual": "demo.support.Helper#decorate(String)",
+      "resolved": true
+    },
+    {
+      "probe_id": "call-base-normalize",
+      "relation_kind": "calls",
+      "source_entity_id": "callable:demo.service.GreetingService#compose(String)",
+      "expected": "demo.base.BaseService#normalize(String)",
+      "actual": "demo.base.BaseService#normalize(String)",
+      "resolved": true
+    }
+  ]
+}

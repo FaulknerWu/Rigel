@@ -1,0 +1,131 @@
+[
+  {
+    "relation_id": "defines:349f3289d580",
+    "relation_kind": "defines",
+    "source_entity_id": "file:src/demo/Application.java",
+    "target_entity_id": "type:demo.Application"
+  },
+  {
+    "relation_id": "defines:0db4ba73dd0e",
+    "relation_kind": "defines",
+    "source_entity_id": "type:demo.Application",
+    "target_entity_id": "callable:demo.Application#main(String[])"
+  },
+  {
+    "relation_id": "defines:24b5e3269076",
+    "relation_kind": "defines",
+    "source_entity_id": "file:src/demo/api/Greeter.java",
+    "target_entity_id": "type:demo.api.Greeter"
+  },
+  {
+    "relation_id": "defines:e68241fa7900",
+    "relation_kind": "defines",
+    "source_entity_id": "type:demo.api.Greeter",
+    "target_entity_id": "callable:demo.api.Greeter#compose(String)"
+  },
+  {
+    "relation_id": "defines:8ccf17e344a6",
+    "relation_kind": "defines",
+    "source_entity_id": "file:src/demo/base/BaseService.java",
+    "target_entity_id": "type:demo.base.BaseService"
+  },
+  {
+    "relation_id": "defines:550b381ac13c",
+    "relation_kind": "defines",
+    "source_entity_id": "type:demo.base.BaseService",
+    "target_entity_id": "callable:demo.base.BaseService#normalize(String)"
+  },
+  {
+    "relation_id": "defines:17af35dd86a3",
+    "relation_kind": "defines",
+    "source_entity_id": "file:src/demo/service/GreetingService.java",
+    "target_entity_id": "type:demo.service.GreetingService"
+  },
+  {
+    "relation_id": "defines:e9c8c367dcbb",
+    "relation_kind": "defines",
+    "source_entity_id": "type:demo.service.GreetingService",
+    "target_entity_id": "callable:demo.service.GreetingService#compose(String)"
+  },
+  {
+    "relation_id": "defines:8b119e7aa547",
+    "relation_kind": "defines",
+    "source_entity_id": "file:src/demo/support/Helper.java",
+    "target_entity_id": "type:demo.support.Helper"
+  },
+  {
+    "relation_id": "defines:6c20c83a16d2",
+    "relation_kind": "defines",
+    "source_entity_id": "type:demo.support.Helper",
+    "target_entity_id": "callable:demo.support.Helper#Helper()"
+  },
+  {
+    "relation_id": "defines:c5b29c47f3fc",
+    "relation_kind": "defines",
+    "source_entity_id": "type:demo.support.Helper",
+    "target_entity_id": "callable:demo.support.Helper#decorate(String)"
+  },
+  {
+    "relation_id": "defines:8c1148ead87b",
+    "relation_kind": "defines",
+    "source_entity_id": "file:BrokenSnippet.java",
+    "target_entity_id": "type:scratch.BrokenSnippet"
+  },
+  {
+    "relation_id": "defines:1297ec7cecb1",
+    "relation_kind": "defines",
+    "source_entity_id": "type:scratch.BrokenSnippet",
+    "target_entity_id": "callable:scratch.BrokenSnippet#halfWritten()"
+  },
+  {
+    "relation_id": "defines:affd4e7c01c8",
+    "relation_kind": "defines",
+    "source_entity_id": "type:scratch.BrokenSnippet",
+    "target_entity_id": "callable:scratch.BrokenSnippet#stillVisible(int)"
+  },
+  {
+    "relation_id": "imports:ae9546f9ec0b",
+    "relation_kind": "imports",
+    "source_entity_id": "file:src/demo/Application.java",
+    "target_entity_id": "type:demo.service.GreetingService",
+    "metadata": {
+      "probe_id": "import-greeting-service"
+    }
+  },
+  {
+    "relation_id": "extends:15531bda940c",
+    "relation_kind": "extends",
+    "source_entity_id": "type:demo.service.GreetingService",
+    "target_entity_id": "type:demo.base.BaseService",
+    "metadata": {
+      "probe_id": "extends-base-service"
+    }
+  },
+  {
+    "relation_id": "implements:6e47b70c50eb",
+    "relation_kind": "implements",
+    "source_entity_id": "type:demo.service.GreetingService",
+    "target_entity_id": "type:demo.api.Greeter",
+    "metadata": {
+      "probe_id": "implements-greeter"
+    }
+  },
+  {
+    "relation_id": "calls:1f445ee4fa11",
+    "relation_kind": "calls",
+    "source_entity_id": "callable:demo.service.GreetingService#compose(String)",
+    "target_entity_id": "callable:demo.support.Helper#decorate(String)",
+    "metadata": {
+      "probe_id": "call-helper-decorate"
+    }
+  },
+  {
+    "relation_id": "calls:37a96c446264",
+    "relation_kind": "calls",
+    "source_entity_id": "callable:demo.service.GreetingService#compose(String)",
+    "target_entity_id": "callable:demo.base.BaseService#normalize(String)",
+    "metadata": {
+      "probe_id": "call-base-normalize"
+    }
+  }
+]
