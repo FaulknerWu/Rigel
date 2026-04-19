@@ -1,0 +1,36 @@
+[package]
+name = "rigel"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# 序列化
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# 异步运行时
+tokio = { version = "1", features = ["full"] }
+
+# 错误处理
+anyhow = "1"
+thiserror = "2"
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# AST 解析
+tree-sitter = "0.25"
+tree-sitter-java = "0.23"
+
+# 图数据库
+falkordb = "0.2"
+
+# LLM API 客户端
+reqwest = { version = "0.12", features = ["json"] }
+
+# MCP 服务器
+rmcp = { version = "1", features = ["server", "transport-io"] }
+
+# 日志
+tracing = "0.1"
+tracing-subscriber = "0.3"
